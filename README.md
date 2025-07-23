@@ -49,8 +49,6 @@ Interactive dashboards showing:
 - 🚨 Stockout Alerts  
 - 📦 Replenishment Recommendations  
 
-> 💾 Optional: Export replenishment plan as CSV or Excel.
-
 ---
 
 ## 🧰 Tech Stack
