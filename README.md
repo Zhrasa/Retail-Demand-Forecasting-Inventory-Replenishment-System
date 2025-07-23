@@ -1,35 +1,65 @@
-# Retail-Demand-Forecasting-Inventory-Replenishment-System
-Simulate a demand forecasting and replenishment system using historical sales data, and build a dashboard to monitor KPIs like stock levels, sell-through rate, and forecast accuracy.
+# 🛒 Retail Demand Forecasting & Inventory Replenishment Simulator
 
-## Core Features:
-Data Cleaning & Transformation:
+This project replicates a simplified **RELEX-like inventory optimization system**, built using Python for forecasting, simulation, and dashboarding.
 
-Load historical retail sales data.
+---
 
-Clean and reshape it (daily or weekly granularity by product/store).
+## 📌 Core Features
 
-Demand Forecasting:
+### 📊 1. Data Cleaning & Transformation
+- Load historical retail sales data (e.g. from Kaggle or synthetic sources).
+- Clean and reshape for analysis — **daily or weekly** granularity by `product-store` pairs.
+- Handle missing values, outliers, and seasonality patterns.
 
-Use time series models (ARIMA, Prophet) or machine learning (XGBoost, LSTM).
+---
 
-Predict demand for the next 30/60 days.
+### 📈 2. Demand Forecasting
+- Predict demand for the next **30/60 days** using:
+  - **Time series models**: ARIMA, Facebook Prophet.
+  - **Machine learning**: XGBoost, LightGBM.
+  - *(Optional advanced)*: LSTM (deep learning model).
+- Cross-validate with backtesting over historical windows.
 
-Safety Stock Calculation:
+---
 
-Implement a basic EOQ (Economic Order Quantity) or service level-based safety stock calculation.
+### 📦 3. Safety Stock Calculation
+- Implement simplified inventory policies:
+  - **EOQ (Economic Order Quantity)**.
+  - **Service-level based** safety stock using standard deviation of demand and desired service level (e.g., 95%).
 
-Inventory Replenishment Logic:
+---
 
-Trigger replenishment orders based on forecast, current stock, lead time.
+### 🔁 4. Inventory Replenishment Logic
+- Trigger **replenishment orders** based on:
+  - Forecasted demand.
+  - Current stock.
+  - Lead time and reorder points.
+- Simulate **stock movements**:
+  - Purchases.
+  - Replenishments.
+  - Stockouts.
 
-Simulate stock movements (purchases, replenishment, stockouts).
+---
 
-Dashboard & Reporting:
+### 📊 5. Dashboard & Reporting (Power BI / Streamlit)
+Interactive dashboards showing:
 
-Power BI or Streamlit dashboard to visualize:
+- 📉 Forecast vs. Actual Demand  
+- 🔁 Inventory Turnover Ratio  
+- 🚨 Stockout Alerts  
+- 📦 Replenishment Recommendations  
 
-Forecast vs. actual demand
+> 💾 Optional: Export replenishment plan as CSV or Excel.
 
-Inventory turnover ratio
+---
 
-Replenishment recommendations
+## 🧰 Tech Stack
+
+- **Python** (Pandas, Scikit-learn, Prophet, XGBoost)
+- **Streamlit** or **Power BI** for dashboard
+- **SQL or SQLite** for local data handling
+- **Git + Git LFS** for versioning large CSVs
+
+---
+
+
